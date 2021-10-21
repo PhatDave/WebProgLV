@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale">
+        <title>Zad2</title>
+    </head>
+
+    <body>
+        <section>
+            <a href="LV1.html"><h1>OBRAZAC</h1></a>
+        </section>
+
+        <form id="formStudent" method="post">
+            <label for="korisnicko_ime">First name:</label>
+            <input type="text" id="korisnicko_ime" name="korisnicko_ime" size="15"
+                   placeholder="Unesite Ime">
+            <br>
+            <label for="lozinka">Lozinka:</label>
+            <input type="password" id="lozinka" name="lozinka" size="15"
+                   placeholder="Unesite Lozinku">
+            <br>
+            <label for="ocjena">Ocjena:</label>
+            <select name="ocjena" id="ocjena">
+                <option value="Izvrstan">Izvrstan</option>
+                <option value="Vrlo dobar">Vrlo dobar</option>
+                <option value="Dobar">Dobar</option>
+                <option value="Dovoljan">Dovoljan</option>
+                <option value="Nedovoljan">Nedovoljan</option>
+            </select>
+            <br>
+            <label for="komentar">Komentar</label>
+            <textarea id="komentar" name="komentar" cols="40" rows="7"
+                      placeholder="Polje za unos komentara (nije obavezno)"></textarea>
+            <br>
+            <div>Usmena ocjena studenta</div>
+            <input type="radio" name="drugaOcjena" id="ocjenaKomunikativan"
+                   value="Komunikativan">
+            <label for="ocjenaKomunikativan">Komunikativan</label>
+            <br>
+            <input type="radio" name="drugaOcjena" id="ocjenaSamostalan" value="Samostalan">
+            <label for="ocjenaSamostalan">Samostalan</label>
+            <br>
+            <input type="radio" name="drugaOcjena" id="ocjenaRadišan" value="Radišan">
+            <label for="ocjenaRadišan">Radišan</label>
+            <br>
+            <input type="radio" name="drugaOcjena"
+                   id="ocjenaNištaodnavedenog" value="Ništa od navedenog" checked>
+            <label for="ocjenaNištaodnavedenog">Ništa od navedenog</label>
+            <br>
+            <table>
+                <tr>
+                    <td><button type="submit" form="formStudent" value="Pošalji">Pošalji</button></td>
+                </tr>
+                <tr>
+                    <td><button type="reset" form="formStudent" value="Poništi">Poništi</button></td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
