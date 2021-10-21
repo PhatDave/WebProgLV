@@ -1,26 +1,27 @@
-.lista {
+#lista {
     padding: 20px;
-    border: solid 2px #345678;
 }
 
-li {
+#lista li {
+    border: solid 2px #345678;
     padding: 6px 15px;
     margin: 8px;
+    display: inline;
 }
 
-.listalia {
+#lista li a {
     border: solid 4px hotpink;
     color: hotpink;
     background-color: #16cae1;
     text-decoration: none;
 }
 
-.listalia:hover {
+#lista li a:hover {
     border-color: chartreuse;
     background-color: indigo;
 }
 
-.listalia:active {
+#lista li a:active {
     color: red;
     background-color: green;
     border-color: red;
