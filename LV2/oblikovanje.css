@@ -1,0 +1,26 @@
+.content {
+    text-align: right;
+    font-style: italic;
+    font-family: "Comic Sans MS", "sans-serif";
+    color: blue;
+}
+
+#prviP {
+    text-align: center;
+    color: red;
+    font-size: 110%;
+    font-family: "Times New Roman", "sans-serif";
+}
+
+#odlomak2 {
+    text-align: justify;
+    font-family: "Verdana", "sans-serif";
+}
+
+#funkyLink a {
+    color: grey;
+}
+
+#funkyLink a:hover {
+    color: yellow;
+}

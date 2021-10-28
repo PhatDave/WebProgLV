@@ -1,0 +1,23 @@
+aside {
+    float: right;
+    width: 30%;
+}
+main {
+    float: left;
+    width: 65%;
+}
+footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}
+
+#idgbtn {
+    border: 2px dotted red;
+    box-shadow: 2px 2px 5px blue;
+}
+
+#idgbtn:hover {
+    border: 5px solid darkorange;
+    box-shadow: 5px 5px 10px darkblue;
+}
