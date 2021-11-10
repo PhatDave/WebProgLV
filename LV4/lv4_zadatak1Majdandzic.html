@@ -31,6 +31,8 @@
 			<button>Gumb 1</button>
 			<button>Gumb 2</button>
 			<button>Gumb 3</button>
+			<br>
+			<textarea id="Majdandzic" rows="10" cols="50"></textarea>
 		</form>
 
 		<script>
@@ -44,6 +46,7 @@
 				email = email.trim();
 				if (!email.includes("@") || !email.substring(email.length - 4, email.length) == ".com") {
 					alert("NEBI ALO");
+					return;
 					// console.log("Bad " + email);
 				}
 				console.log(email);
@@ -51,6 +54,13 @@
 				let name = document.getElementById("nameInput").value;
 				if (name.length == 0) {
 					alert("Polje ime i prezime ne moze biti prazno");
+					return;
+				}
+
+				let content = document.getElementById("Majdandzic").value;
+				if (content.length < 30) {
+					alert("Nedovoljno znakova u krkanu");
+					return;
 				}
 			}
 		</script>
