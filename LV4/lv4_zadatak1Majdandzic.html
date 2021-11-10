@@ -4,20 +4,41 @@
 		<meta charset="UTF-8"/>
 		<meta http-equiv="X-UA-Compatible"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css.css">
 	</head>
 	<body>
 		<h1>Validacija</h1>
-		<button>Pozdrav</button>
+		<button type="button" ondblclick="pozdrav();">Pozdrav</button>
 		<br>
 		<form method="get">
 			<label for="nameInput">Ime i prezime</label>
 			<input type="text" id="nameInput">
 			<br>
-			<label for="bigText">Neki label jel</label>
+			<label for="bigText">Polje za ispis</label>
+			<textarea id="bigText" placeholder="Mjesto za ispis kolokvija"></textarea>
 			<br>
-			<textarea id="bigText"></textarea>
+			<label for="nOInput">Umetnite broj</label>
+			<input type="number" id="nOInput">
 			<br>
-			<input type="number">
+			<label for="emailInput">Unesite vas email</label>
+			<input type="text" id="emailInput">
+			<br>
+			<label for="result">Rezultat</label>
+			<input type="text" id="result" readonly>
+			<br>
+			<button id="isOkButton">ok?</button>
+			<br>
+			<button>Gumb 1</button>
+			<button>Gumb 2</button>
+			<button>Gumb 3</button>
 		</form>
+		
+		<script>
+			function pozdrav() {
+				for (let i = 0; i < 2; i++) {
+					alert("pozdrav " + i);
+				}
+			}
+		</script>
 	</body>
 </html>
