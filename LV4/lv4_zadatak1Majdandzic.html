@@ -11,7 +11,7 @@
 		<h1>Validacija</h1>
 		<button ondblclick="pozdrav();">Pozdrav</button>
 		<br>
-		<form method="get">
+		<form method="get" onsubmit="CheckDatapls();">
 			<label for="nameInput">Ime i prezime</label>
 			<input type="text" id="nameInput">
 			<br>
@@ -90,28 +90,29 @@
 					alert("pozdrav " + i);
 				}
 			}
-			function provjeri() {
+			function provjeri(debugToboze) {
 				let email = document.getElementById("emailInput").value;
 				email = email.trim();
 				let good = checkEmail(email);
 				if (good != "") {
-					alert(good);
-					return;
+					if (!debugToboze) alert(good);
+					return false;
 					// console.log("Bad " + email);
 				}
 				console.log(email);
 
 				let name = document.getElementById("nameInput").value;
 				if (name.length == 0) {
-					alert("Polje ime i prezime ne moze biti prazno");
-					return;
+					if (!debugToboze) alert("Polje ime i prezime ne moze biti prazno");
+					return false;
 				}
 
 				let content = document.getElementById("bigText").value;
 				if (content.length < 30) {
-					alert("Nedovoljno znakova u krkanu");
-					return;
+					if (!debugToboze) alert("Nedovoljno znakova u krkanu");
+					return false;
 				}
+				return true;
 			}
 			function doSquareFunc() {
 				let element = document.getElementById("numberInput");
@@ -146,6 +147,11 @@
 			}
 			function obrisi() {
 				document.getElementById("prezime").innerHTML = "";
+			}
+			function CheckDatapls() {
+				if (provjeri(true)) {
+					window.prompt("Vaše ime je " + document.getElementById("nameInput").value.split(" ")[0] + ", vaše prezime " + document.getElementById("nameInput").value.split(" ")[1] + ", vaša email adresa " + document.getElementById("emailInput").value + ".")
+				}
 			}
 		</script>
 	</body>
