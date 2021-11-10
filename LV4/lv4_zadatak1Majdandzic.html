@@ -33,11 +33,14 @@
 			<button>Gumb 2</button>
 			<button>Gumb 3</button>
 			<br>
-			<textarea id="Majdandzic" rows="10" cols="50"></textarea>
-			<br>
 		</form>
 		
 		<div class="Centered">
+			<textarea id="prezime" rows="10" cols="50"></textarea>
+			<br>
+			<button onmouseup="kolegij();">Kolegij</button>
+			<br>
+
 			<input type="number" id="numberInput">
 			<div class="tooltip">
 				<i class="fa fa-ambulance"></i>
@@ -71,7 +74,7 @@
 					return;
 				}
 
-				let content = document.getElementById("Majdandzic").value;
+				let content = document.getElementById("bigText").value;
 				if (content.length < 30) {
 					alert("Nedovoljno znakova u krkanu");
 					return;
@@ -93,6 +96,20 @@
 				} else {
 					document.getElementById("result2jel").value = No * No;
 				}
+			}
+			function kolegij() {
+				let element = document.getElementById("prezime");
+				let kolegiji = [];
+				for (let i = 0; i < 8; i++) {
+					kolegiji.push("kolegija");
+				}
+				console.log(kolegiji);
+
+				for(var broj_kolegija in kolegiji) {
+					document.getElementById('prezime').innerHTML+=("Kolegij broj [" + broj_kolegija);
+					document.getElementById('prezime').innerHTML+=("]: "+ kolegiji[broj_kolegija] + "\n")
+				}
+
 			}
 		</script>
 	</body>
