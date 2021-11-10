@@ -1,4 +1,4 @@
-console.log(document.title);
-console.log(document.location);
-console.log(document.bgColor);
-console.log(document.lastModified);
+document.write(document.title + "<br>");
+document.write(document.location + "<br>");
+document.write(document.bgColor + "<br>");
+document.write(document.lastModified + "<br>");
