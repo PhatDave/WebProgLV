@@ -47,6 +47,11 @@
 					// console.log("Bad " + email);
 				}
 				console.log(email);
+
+				let name = document.getElementById("nameInput").value;
+				if (name.length == 0) {
+					alert("Polje ime i prezime ne moze biti prazno");
+				}
 			}
 		</script>
 	</body>
