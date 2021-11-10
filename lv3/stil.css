@@ -1,0 +1,29 @@
+.head {
+    color: red;
+    background-color: blue;
+    text-align: center;
+}
+
+.even {
+    background-color: #6b6b6b;
+    height: 300px;
+    text-align: center;
+}
+
+.odd {
+    background-color: #464646;
+}
+
+.divneki p:first-child {
+    color: maroon;
+    font-size: 32px;
+}
+
+.chungus {
+    height: 800px;
+    width: 4000px
+}
+
+.footerImg {
+    width: 4000px;
+}
