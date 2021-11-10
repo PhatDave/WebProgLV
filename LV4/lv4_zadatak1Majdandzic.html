@@ -39,6 +39,7 @@
 			<textarea id="prezime" rows="10" cols="50"></textarea>
 			<br>
 			<button onmouseup="kolegij();">Kolegij</button>
+			<button onmouseover="obrisi();">Obrisi</button>
 			<br>
 
 			<input type="number" id="numberInput">
@@ -103,13 +104,16 @@
 				for (let i = 0; i < 8; i++) {
 					kolegiji.push("kolegija");
 				}
-				console.log(kolegiji);
+				// console.log(kolegiji);
 
 				for(var broj_kolegija in kolegiji) {
 					document.getElementById('prezime').innerHTML+=("Kolegij broj [" + broj_kolegija);
 					document.getElementById('prezime').innerHTML+=("]: "+ kolegiji[broj_kolegija] + "\n")
 				}
 
+			}
+			function obrisi() {
+				document.getElementById("prezime").innerHTML = "";
 			}
 		</script>
 	</body>
