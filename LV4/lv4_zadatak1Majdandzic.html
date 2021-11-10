@@ -54,6 +54,37 @@
 		</div>
 
 		<script>
+			function checkEmail(email) {
+				if (!email.includes('@')) {
+					return "Emailu nedostaje @"
+					// console.log('no @');
+					// return false;
+				}
+
+				if (email.split("@")[0].length <= 2) {
+					return "Prije znaka @ nema dovoljno znakova"
+					// console.log('no @ len 0');
+					// return false;
+				}
+				if (email.split("@")[1].length <= 2) {
+					return "Poslije znaka @ nema dovoljno znakova"
+					// console.log('no @ len 1');
+					// return false;
+				}
+				
+				if (!email.split("@")[1].includes(".")) {
+					return "Emailu nedostaje ."
+					// console.log('no .');
+					// return false;
+				}
+				if (email.split("@")[1].split(".")[1].length <= 2) {
+					return "Poslije znaka . nema dovoljno znakova"
+					// console.log('no . len 1');
+					// return false;
+				}
+
+				return "";
+			}
 			function pozdrav() {
 				for (let i = 0; i < 2; i++) {
 					alert("pozdrav " + i);
@@ -62,8 +93,9 @@
 			function provjeri() {
 				let email = document.getElementById("emailInput").value;
 				email = email.trim();
-				if (!email.includes("@") || !email.substring(email.length - 4, email.length) == ".com") {
-					alert("NEBI ALO");
+				let good = checkEmail(email);
+				if (good != "") {
+					alert(good);
 					return;
 					// console.log("Bad " + email);
 				}
