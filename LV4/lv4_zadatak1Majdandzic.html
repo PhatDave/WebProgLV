@@ -5,6 +5,7 @@
 		<meta http-equiv="X-UA-Compatible"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="css.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	</head>
 	<body>
 		<h1>Validacija</h1>
@@ -33,7 +34,20 @@
 			<button>Gumb 3</button>
 			<br>
 			<textarea id="Majdandzic" rows="10" cols="50"></textarea>
+			<br>
 		</form>
+		
+		<div class="Centered">
+			<input type="number" id="numberInput">
+			<div class="tooltip">
+				<i class="fa fa-ambulance"></i>
+				<span class="tooltiptext">Unesite broj izmedju 1 i 10</span>
+			</div>
+			<button id="doSquare" onclick="doSquareFunc();">Kavdriraj</button>
+			<br>
+			<label for="result">Rezultat</label>
+			<input type="text" id="result2jel" readonly>
+		</div>
 
 		<script>
 			function pozdrav() {
@@ -61,6 +75,23 @@
 				if (content.length < 30) {
 					alert("Nedovoljno znakova u krkanu");
 					return;
+				}
+			}
+			function doSquareFunc() {
+				let element = document.getElementById("numberInput");
+				let No = element.value;
+				// console.log(No);
+				No = parseInt(No);
+				// console.log(No);
+				if (isNaN(No) || !(No > 0 && No <= 10)) {
+					// console.log("NEVALJA ALO");
+					element.value = "";
+					element.setAttribute("placeholder", "NEVALJA ALO");
+					// console.log(element.getAttribute("placeholder"));
+					// alert("NEVALJA ALO");
+					return;
+				} else {
+					document.getElementById("result2jel").value = No * No;
 				}
 			}
 		</script>
