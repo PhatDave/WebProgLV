@@ -1,0 +1,38 @@
+<html>
+    <head>
+    <title>JavaScript</title>
+    </head>
+    <body>
+    <h1>Jednostavna tvorba objekta</h1>
+    <script type="text/javascript">
+
+    function pas(ime, pasmina, starost) {
+        this.ime = ime;
+        this.pasmina = pasmina;
+        this.starost = starost;
+    }
+
+    var bijeli = new pas("jura","dalmatiner", "8");
+    var garavi = new pas("garo", "mješanac", "nepoznato");
+    var nekiDrugi = new pas("drugi", "madjarski ovcar", "32");
+    var nekiTreci = new pas("treci", "bernardirancan", "134");
+
+    document.write(
+    "Ime prvog psa je: " + bijeli.ime
+    + ", pasmina: " + bijeli.pasmina
+    + " i starost: " + bijeli.starost + "<br>")
+    document.write(
+    "Ime drugog psa je: " + garavi.ime
+    + ", pasmina: " + garavi.pasmina
+    + " i starost: " + garavi.starost + "<br>")
+    document.write(
+    "Ime treceg psa je: " + nekiDrugi.ime
+    + ", pasmina: " + nekiDrugi.pasmina
+    + " i starost: " + nekiDrugi.starost + "<br>")
+    document.write(
+    "Ime cetvrtog psa je: " + nekiTreci.ime
+    + ", pasmina: " + nekiTreci.pasmina
+    + " i starost: " + nekiTreci.starost)
+    </script>
+    </body>
+</html>
