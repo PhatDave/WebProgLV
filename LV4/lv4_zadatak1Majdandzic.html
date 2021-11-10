@@ -8,7 +8,7 @@
 	</head>
 	<body>
 		<h1>Validacija</h1>
-		<button type="button" ondblclick="pozdrav();">Pozdrav</button>
+		<button ondblclick="pozdrav();">Pozdrav</button>
 		<br>
 		<form method="get">
 			<label for="nameInput">Ime i prezime</label>
@@ -26,18 +26,27 @@
 			<label for="result">Rezultat</label>
 			<input type="text" id="result" readonly>
 			<br>
-			<button id="isOkButton">ok?</button>
+			<button id="isOkButton" onclick="provjeri();">Provjeri</button>
 			<br>
 			<button>Gumb 1</button>
 			<button>Gumb 2</button>
 			<button>Gumb 3</button>
 		</form>
-		
+
 		<script>
 			function pozdrav() {
 				for (let i = 0; i < 2; i++) {
 					alert("pozdrav " + i);
 				}
+			}
+			function provjeri() {
+				let email = document.getElementById("emailInput").value;
+				email = email.trim();
+				if (!email.includes("@") || !email.substring(email.length - 4, email.length) == ".com") {
+					alert("NEBI ALO");
+					// console.log("Bad " + email);
+				}
+				console.log(email);
 			}
 		</script>
 	</body>
