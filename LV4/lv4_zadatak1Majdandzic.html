@@ -133,10 +133,14 @@
 			}
 			function kolegij() {
 				let element = document.getElementById("prezime");
-				let kolegiji = [];
-				for (let i = 0; i < 8; i++) {
-					kolegiji.push("kolegija");
-				}
+				var kolegiji = new Array(7);
+				kolegiji[0] = "kolegija0000";
+				kolegiji[1] = "kolegija1111";
+				kolegiji[2] = "kolegija2222";
+				kolegiji[3] = "kolegija3333";
+				kolegiji[4] = "kolegija4444";
+				kolegiji[5] = "kolegija5555";
+				kolegiji[6] = "kolegija6666";
 				// console.log(kolegiji);
 
 				for(var broj_kolegija in kolegiji) {
