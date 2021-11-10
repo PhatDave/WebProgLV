@@ -11,28 +11,43 @@
         this.pasmina = pasmina;
         this.starost = starost;
     }
+    
+    function macka(ime, boja, dob, spol) {
+        this.ime = ime;
+        this.boja = boja;
+        this.dob = dob;
+        this.spol = spol;
+    }
 
     var bijeli = new pas("jura","dalmatiner", "8");
     var garavi = new pas("garo", "mješanac", "nepoznato");
     var nekiDrugi = new pas("drugi", "madjarski ovcar", "32");
     var nekiTreci = new pas("treci", "bernardirancan", "134");
 
+    var micika = new macka("micika", "sarena", "vrlo stara", "zenski");
+    var tigar = new macka("tigar", "zuti", "sta ja znam 55", "muski");
+
     document.write(
     "Ime prvog psa je: " + bijeli.ime
     + ", pasmina: " + bijeli.pasmina
-    + " i starost: " + bijeli.starost + "<br>")
+    + " i starost: " + bijeli.starost + "<br>");
     document.write(
     "Ime drugog psa je: " + garavi.ime
     + ", pasmina: " + garavi.pasmina
-    + " i starost: " + garavi.starost + "<br>")
+    + " i starost: " + garavi.starost + "<br>");
     document.write(
     "Ime treceg psa je: " + nekiDrugi.ime
     + ", pasmina: " + nekiDrugi.pasmina
-    + " i starost: " + nekiDrugi.starost + "<br>")
+    + " i starost: " + nekiDrugi.starost + "<br>");
     document.write(
     "Ime cetvrtog psa je: " + nekiTreci.ime
     + ", pasmina: " + nekiTreci.pasmina
-    + " i starost: " + nekiTreci.starost)
+    + " i starost: " + nekiTreci.starost);
+    document.write("<br><br>");
+    document.write("Ime macke No.1 je " + tigar.ime + ", boje " + tigar.boja + ", dob " + tigar.dob + ", spola " + tigar.spol + "<br>")
+    document.write("<br><br>");
+    micika.dob = "jos starija"
+    document.write("Ime macke No.2 je " + micika.ime + ", boje " + micika.boja + ", dob " + micika.dob + ", spola " + micika.spol + "<br>")
     </script>
     </body>
 </html>
