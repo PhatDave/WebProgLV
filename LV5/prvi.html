@@ -6,9 +6,36 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <style type="text/css">
+            .answer {
+                background-color: #eee;
+                border: 1px solid #999;
+                padding: 5px;
+                margin: 15px 60px;
+            }
+            .not {
+                margin: 15px 0px;
+            }
+        </style>
     </head>
     <body>
         <h1>Prvi naslov</h1>
+        <p>
+            <div class="not">b) U konzoli unijeti kod za ispis vrijednosti koja se nalazi u naslovu.</div>
+            <span class="answer">$("h1").text()</span>
+        </p>
+        <p>
+            <div class="not">c) Kroz konzolu promijeniti vrijednost teksta u paragrafu</div>
+            <span class="answer">$("p").text("test123")</span>
+        </p>
+        <p>
+            <div class="not">d) Kroz konzolu dodati neki CSS paragrafu</div>
+            <span class="answer">$("head").append( $('&ltstyle type="text/css"&gt h1 {color: red;}</span>
+        </p>
+        <p>
+            <div class="not">e) Kroz konzolu promijeniti sliku na stranici.            </div>
+            <span class="answer">$("img").attr("src", "Big_chungus.png")</span>
+        </p>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus iure nihil deleniti unde esse. Saepe omnis dolorum fugit, dignissimos, voluptates nobis quae sapiente id quo eius harum quaerat, minima neque.
         Ipsa sit sunt consectetur quibusdam est laudantium provident ipsum, dolores facere omnis cumque consequuntur tenetur vel suscipit vero perferendis blanditiis? Atque amet temporibus ipsam blanditiis minima dignissimos placeat possimus. Sapiente!
         Consectetur voluptates, quod, autem perferendis enim voluptatem obcaecati unde deleniti repudiandae corrupti cumque, neque quasi sint sunt? Quibusdam deleniti accusamus, eligendi magni quaerat aliquid aperiam rem repudiandae ea a laudantium!
