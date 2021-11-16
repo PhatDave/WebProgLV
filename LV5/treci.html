@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<meta charset="UTF-8"/>
+		<meta http-equiv="X-UA-Compatible"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+        <style type="text/css">
+            .droppable {
+                height: 200px;
+                width: 200px;
+                border: 1px solid black;
+                float: left;
+                margin: 10px;
+            }
+            .draggable {
+                height: 100px;
+                width: 100px;
+                float: left;
+            }
+            .good {
+                border: 2px solid green;
+            }
+            .bad {
+                border: 2px solid red;
+            }
+        </style>
+    </head>
+    <body>
+        <span class="droppable 1"></span>
+        <span class="droppable 2"></span>
+        <div><img src="dd1.png" class="draggable 1"></div>
+        <div><img src="dd2.png" class="draggable 2"></div>
+        <script>
+            $(document).ready(function() {
+                function GetNoClass(element) {
+                    return element.attr("class").split(" ")[1];
+                }
+                function CheckInput(event, ui) {
+                    if (GetNoClass($(this)) == GetNoClass(ui.draggable)) {
+                        $(this).addClass("good");
+                    } else {
+                        $(this).addClass("bad");
+                    }
+                }
+                $(".draggable").draggable();
+                $(".droppable").droppable({
+                    drop: CheckInput,
+                    over: CheckInput,
+                    out: function(event, ui) {
+                        $(this).removeClass("good");
+                        $(this).removeClass("bad");
+                    }
+                });
+            })
+        </script>
+    </body>
+</html>
