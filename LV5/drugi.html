@@ -7,22 +7,30 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <style type="text/css">
+            .zelena {
+                color: green;
+            }
         </style>
     </head>
     <body>
         <h1>Neka web stranica domace izrade</h1>
         <p>Ova lista sadrzi 3 filma</p>
-        <ol>
+        <ul>
             <li>Film1</li>
             <li>Film2</li>
             <li>Film3</li>
-        </ol>
+        </ul>
         <p>Ova lista sadrzi 3 pjesme</p>
-        <ol>
+        <ul>
             <li>Pjesma1</li>
             <li>Pjesma2</li>
             <li>Pjesma3</li>
-        </ol>
-        <button>Dugme</button>
+        </ul>
+        <button onclick="DugmeGoClick();">Dugme</button>
+        <script>
+            function DugmeGoClick() {
+                $("ul").first().addClass("zelena");
+            }
+        </script>
     </body>
 </html>
